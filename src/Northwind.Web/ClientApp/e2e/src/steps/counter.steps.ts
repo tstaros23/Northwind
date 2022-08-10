@@ -9,11 +9,11 @@ Before(() => {
   page = new AppPage();
 });
 
-Given("I am on the counter page", async () => {
+Given("I am on the counter page", {timeout: 2 * 5000}, async () => {
   await page.navigateToCounter();
 });
 
-When("I click on the increment button {int} times", async (x: number) => {
+When("I click on the increment button {int} times", {timeout: 2 * 5000}, async (x: number) => {
   // Click on the increment button x times.
   const incrementButton = element(by.id("increment"));
   for (let index = 0; index < x; index++) {

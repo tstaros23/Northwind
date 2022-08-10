@@ -9,6 +9,6 @@ Before(() => {
   page = new AppPage();
 });
 
-Given("I am on the counter-two page", async () => {
+Given("I am on the counter-two page", {timeout: 2 * 5000}, async () => {
   await page.navigateToCounterTwo();
 });

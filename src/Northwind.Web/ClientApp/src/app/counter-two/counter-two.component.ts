@@ -14,6 +14,6 @@ export class CounterTwoComponent implements OnInit {
   }
 
   public incrementCounter() {
-    this.currentCount++;
+    this.currentCount += 2;
   }
 }
