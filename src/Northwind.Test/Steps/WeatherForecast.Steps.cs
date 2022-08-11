@@ -6,6 +6,7 @@ using Xunit.Gherkin.Quick;
 
 using Northwind.Web.Services;
 using Northwind.Web.Models;
+using Xunit.Sdk;
 
 namespace Northwind.Test.Features
 {
@@ -37,7 +38,15 @@ namespace Northwind.Test.Features
 		[When(@"I get the forecast for yesterday")]
 		public void I_get_the_forecast_for_yesterday()
 		{
-			_forecast = _weather.ForecastFor(DateTime.Now.AddDays(-1));
+			try { 
+				_forecast = _weather.ForecastFor(DateTime.Now.AddDays(-1));
+				throw new XunitException("Expect service to throw an exception");
+			}
+			catch(ArgumentException ex){
+				this._serviceException = ex;
+			}
+			// if (_forecast.Date < DateTime.Today)
+			// 	throw new ArgumentException();
 		}
 
 		[Then(@"the service should throw an invalid argument exception")]
