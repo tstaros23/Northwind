@@ -22,6 +22,8 @@ namespace Northwind.Web.Services
 		{
 			var rng = new Random();
 			var temperatureC = rng.Next(-20, 55);
+			if (dateTime < DateTime.Today)
+				throw new ArgumentException();
 			return new WeatherForecast
 			{
 					Date = dateTime,
