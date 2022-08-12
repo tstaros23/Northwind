@@ -45,11 +45,9 @@ namespace Northwind.Test.Features
 			catch(ArgumentException ex){
 				this._serviceException = ex;
 			}
-			// if (_forecast.Date < DateTime.Today)
-			// 	throw new ArgumentException();
 		}
 
-		[Then(@"the service should throw an invalid argument exception")]
+		[Then(@"the service should throw an argument exception")]
 		public void The_service_should_throw_an_argument_exception()
 		{
 			Assert.IsType<ArgumentException>(_serviceException);
