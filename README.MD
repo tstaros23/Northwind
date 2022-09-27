@@ -11,7 +11,7 @@ Make sure to also have the following installed on your machine:
 * [Node JS](https://www.nodejs.org/) (I recommend LTS) I used version 14.16.1
 * [Angular](https://angular.io) the Angular project template is on version 8.2
 
-Additional resources 
+Additional resources
 * [Cucumber](https://cucumber.io) is used to run the Angular Gherkin tests as well as the xUnit C# tests. The project already has installed the tests.
   * Thanks to Wael Fezai [BDD with Angular and CucumberJS](https://codeburst.io/bdd-with-angular-and-cucumberjs-8cb4c33c2dff) article which help me get cucumber started for the Angular e2e tests.
   * Thanks to [Xunit.Gherkin.Quick](https://github.com/ttutisani/Xunit.Gherkin.Quick) easy to use xUnit package for .NET tests.
@@ -58,7 +58,7 @@ Next you should run the .NET backend Gherkin tests, then the frontend e2e Gherki
 # Backend tests (WebAPI, .NET 5, C#)
 The backend tests are powered by xUnit and are found at "./src/Northwind.Test/". To run the tests, build the solution and open the "Test Explorer". For Visual Studio Code, you will need to click the "Refresh" button on the .NET Core Test Explorer extension.
 
-### Backend example test 
+### Backend example test
 **Feature Location**: /src/Northwind.Test/Features/WeatherForecast.feature  
 **Steps Location**: /src/Northwind.Test/Steps/WeatherForecast.Steps.cs  
 **Scenario**: Get the weather forecase for tomorrow  
@@ -87,7 +87,7 @@ To run the unit tests use:
 ```npm run test```
 
 
-### Frontend example test 
+### Frontend example test
 **Unit test location**: /src/Northwind.Web/ClientApp/src/app/counter/counter.component.spec.ts  
 
 **Feature Location**: /src/Northwind.Web/ClientApp/e2e/src/features/counter.feature  
@@ -95,7 +95,7 @@ To run the unit tests use:
 **Scenario**: Basic increment scenario
 
 
-Review the feature and steps files to determine how the test properly works. 
+Review the feature and steps files to determine how the test properly works.
 
 ### Frontend broken test
 **Unit test location**: /src/Northwind.Web/ClientApp/src/app/counter-two/counter-two.component.spec.ts
@@ -108,6 +108,11 @@ Invetigate why the tests are failing, then make the appropriate code changes to 
 
 ### Frontend challenge test
 After you have mastered fixing the broken test, the Product Owner says that the customer wants to increment by N where N is inputted by the customer. Create an Angular component using [ng generate component](https://angular.io/cli/generate) command. The CounterNComponent should be similar to the CounterComponent but has an input field of N which is used to increment by N. Include an e2e test.
+
+### Progress
+
+** I was able to get the frontend and backend tests fixed and passing
+** I started working on the Frontend challenge test
 
 # License
 Copyright (c) Tom Mayfield. All rights reserved.
